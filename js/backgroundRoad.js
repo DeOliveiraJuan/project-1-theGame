@@ -2,12 +2,12 @@ class BackgroundRoad {
     constructor(ctx) {
         this.ctx = ctx;
         this.x = 0;
-        this.y = 480;
+        this.y = CANVAS_HEIGHT - ROAD_HEIGHT;
         this.vx = -5;
         this.img = new Image();
         this.img.src = "../images/Highway.png";
-        this.w = this.ctx.canvas.width;
-        this.h = 120;
+        this.w = CANVAS_WIDTH;
+        this.h = ROAD_HEIGHT;
     }
 
     draw() {

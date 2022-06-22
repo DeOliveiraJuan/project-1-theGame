@@ -4,8 +4,9 @@ class Game {
         this.intervalId = null;
         this.backgroundCity = new BackgroundCity(this.ctx);
         this.backgroundRoad = new BackgroundRoad(this.ctx);
+        this.player = new Player(this.ctx);
+        this.obstacle = new Obstacle(this.ctx);
     }
-
 
 start() {
     this.intervalId = setInterval( () => {
@@ -28,11 +29,14 @@ clear() {
 draw() {
     this.backgroundCity.draw()
     this.backgroundRoad.draw()
+    this.player.draw()
+    this.obstacle.draw()
     }
 
 move() {
     this.backgroundCity.move()
     this.backgroundRoad.move()
+    this.player.move()
 }
 }
     

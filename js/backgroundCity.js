@@ -2,12 +2,12 @@ class BackgroundCity {
     constructor(ctx) {
         this.ctx = ctx;
         this.x = 0;
-        this.y =0;
-        this.vx = -2;
+        this.y = 0;
+        this.vx = -1;
         this.img = new Image();
         this.img.src = "../images/Background.jpg";
-        this.w = this.ctx.canvas.width;
-        this.h = this.ctx.canvas.height - 90;
+        this.w = CANVAS_WIDTH;
+        this.h = CANVAS_HEIGHT - ROAD_HEIGHT;
     }
 
     draw() {
