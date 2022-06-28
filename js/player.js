@@ -3,19 +3,19 @@ class Player {
         this.ctx = ctx;
         this.x = CANVAS_WIDTH / 3;
         this.y = CANVAS_HEIGHT / 1.2;
-        this.w = 70;
-        this.h = 70;
+        this.w = 40;
+        this.h = 40;
         this.img = new Image();
-        this.img.src = "../images/Rider.png"
+        this.img.src = "../images/riderPurpleNB.png"
 
         this.vx = 2;
         this.vy = 2;
 
         this.actions = {
-            ArrowUp: false,
-            ArrowDown: false,
-            ArrowRight: false,
-            ArrowLeft: false
+            w: false,
+            s: false,
+            d: false,
+            a: false
         }
         this.setListeners()
     }
@@ -40,6 +40,19 @@ class Player {
     }
 
     move() {
+        this.applyActions()
+        if(this.actions.w) {
+            this.y -= this.vy
+        } else if (this.actions.s) {
+            this.y += this.vy
+        } else if (this.actions.d) {
+            this.x += this.vx 
+        } else if (this.actions.a) {
+            this.x -= this.vx
+        }
+    }
+
+    applyActions()  {
         if(this.y <= CANVAS_HEIGHT - ROAD_HEIGHT - (this.h/2)) {
             this.y = CANVAS_HEIGHT - ROAD_HEIGHT - (this.h/2);
         } else if (this.y >= CANVAS_HEIGHT - this.h) {
@@ -51,15 +64,5 @@ class Player {
         } else if (this.x <= 0) {
             this.x = 0;
         } 
-
-        if(this.actions.ArrowUp) {
-            this.y -= this.vy
-        } else if (this.actions.ArrowDown) {
-            this.y += this.vy
-        } else if (this.actions.ArrowRight) {
-            this.x += this.vx 
-        } else if (this.actions.ArrowLeft) {
-            this.x -= this.vx
-        }
     }
 }

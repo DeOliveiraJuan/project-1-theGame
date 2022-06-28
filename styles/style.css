@@ -21,9 +21,19 @@ body {
 }
 
 #play-btn{
-    background: url("/images/Startbtn.png"); 
+    background: url("/images/startBtn.png"); 
     background-position: center;
     background-size: cover;
-    width: 200px;
-    height: 80px;
+    width: 120px;
+    height: 50px;
+}
+
+#play-btn:active {
+  background-color: transparent;
+  transform: translateY(4px);
+}
+
+.points {
+    color: white;
+    font-size: 45px;
 }

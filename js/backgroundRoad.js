@@ -3,7 +3,7 @@ class BackgroundRoad {
         this.ctx = ctx;
         this.x = 0;
         this.y = CANVAS_HEIGHT - ROAD_HEIGHT;
-        this.vx = -5;
+        this.vx = -10;
         this.img = new Image();
         this.img.src = "../images/Highway.png";
         this.w = CANVAS_WIDTH;
