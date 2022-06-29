@@ -19,7 +19,7 @@ start() {
         this.countPoints();
         this.tickObstacle++
 
-        if(this.tickObstacle % 50 === 0) {
+        if(this.tickObstacle % 60 === 0) {
             this.tickObstacle = 0;
             this.clearObstacles();
             this.addObstacle();
@@ -76,8 +76,8 @@ gameOver() {
     clearInterval(this.intervalId);
     this.intervalId = null;
 
-    this.ctx.font = "50px Comic Sans";
-    this.ctx.fillStyle = "purple";
+    this.ctx.font = "50px Arial";
+    this.ctx.fillStyle = "white";
     this.ctx.textAlign = "center";
     this.ctx.fillText("GAME OVER", this.ctx.canvas.width/2, this.ctx.canvas.height/2);
     }

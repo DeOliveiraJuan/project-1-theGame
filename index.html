@@ -5,20 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
+    <link href="http://fonts.cdnfonts.com/css/sf-pixelate" rel="stylesheet">
     <title>The Game</title>
 </head>
 <body>  
 
-  <div class="game-box">
-
+<div class="game-box">
     <button id="play-btn"></button>  
-
     <div class="the-game">
-     <canvas id="canvas" width="700" height="600"></canvas>
+            <canvas id="canvas" width="700" height="600"></canvas>
+            <div class="points">Score: <span id="score">  </span> 
+            <div class="game-over"></div>
+        </div>
     </div>
-
-    <div class="points">Score: <span id="score">  </span></div>
-
 </div>
 
     <script src="/js/constants.js"></script>

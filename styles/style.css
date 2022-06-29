@@ -7,7 +7,6 @@ body {
 }
 
 .game-box {
-    margin-top: 5%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -16,24 +15,44 @@ body {
 
 .the-game {
     display: flex;
-    justify-content: center;
-    padding: 40px 40px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
 }
 
 #play-btn{
     background: url("/images/startBtn.png"); 
     background-position: center;
     background-size: cover;
-    width: 120px;
+    width: 150px;
     height: 50px;
+    border: none;
 }
 
 #play-btn:active {
-  background-color: transparent;
   transform: translateY(4px);
 }
 
 .points {
+    background-image: url("/images/scoreTextbox.png");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    width: 180px;
+    height: 60px;
     color: white;
-    font-size: 45px;
+    font-size: 30px;
+    line-height: 60px;
+    font-family: 'SF Pixelate', sans-serif;
+    font-size: larger;
 }
+
+.game-over {
+    background-color: black;
+    width: 700px;
+    height: 600px;
+}
+
+
