@@ -8,9 +8,25 @@ class Game {
         this.obstacles = [];
         this.tickObstacle = 0;
         this.points = 0;
+        this.bgAudio = new Audio()
+        this.bgAudio.src = "/audio/tranceLoop.wav"
+        this.bgAudio.volume = 0.2;
+        this.bgAudio.loop = true;
+        this.bgAudioMoto = new Audio()
+        this.bgAudioMoto.src = "/audio/vespaSoundFinal.mp3"
+        this.bgAudioMoto.volume = 0.5;
+        this.bgAudioMoto.loop = true;
+        this.gameOverAudio = new Audio()
+        this.gameOverAudio.src = "/audio/coffinDance.mp3"
+        this.gameOverAudio.volume = 0.5;
+        this.explotionAudio = new Audio()
+        this.explotionAudio.src = "/audio/explotion.wav"
+        this.explotionAudio.volume = 0.5;
     }
 
 start() {
+    this.bgAudio.play()
+    this.bgAudioMoto.play()
     this.intervalId = setInterval( () => {
         this.clear();
         this.draw();
@@ -67,6 +83,7 @@ move() {
 checkCollisions() {
    this.obstacles.forEach((obs, obsIndex) => {
     if(obs.collide(this.player)) {
+        this.explotionAudio.play()
         this.gameOver();
      }
   })
@@ -76,9 +93,14 @@ gameOver() {
     clearInterval(this.intervalId);
     this.intervalId = null;
 
-    this.ctx.font = "50px Arial";
-    this.ctx.fillStyle = "white";
-    this.ctx.textAlign = "center";
-    this.ctx.fillText("GAME OVER", this.ctx.canvas.width/2, this.ctx.canvas.height/2);
-    }
+    const gOver = document.querySelector(".game-over")
+    
+    setTimeout( () => {
+    gOver.style.visibility = "visible"; this.gameOverAudio.play();
+    }, 1500)
+
+    this.bgAudio.pause()
+    this.bgAudioMoto.pause()
+    
+  }
 }

@@ -12,4 +12,5 @@ function startGame() {
     if(game.intervalId === null) {
         game.start()
     } 
-};
+}
+
