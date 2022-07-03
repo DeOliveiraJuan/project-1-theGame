@@ -23,7 +23,16 @@ body {
     padding: 50px;
 }
 
+.menu-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
 #play-btn{
+    position: relative;
     background: url("/images/startBtn.png"); 
     background-position: center;
     background-size: cover;
@@ -35,6 +44,35 @@ body {
 #play-btn:active {
   transform: translateY(4px);
 }
+
+#pause-btn {
+    position: absolute;
+    background: url("/images/pauseBtn.png"); 
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 55px;
+    border: none;
+    visibility: hidden;
+}
+
+#pause-btn:active {
+    transform: translateY(4px);
+  }
+
+#reset-btn {
+    background: url("/images/resetBtn.png"); 
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 50px;
+    border: none;
+    visibility: hidden;
+}
+
+#reset-btn:active {
+    transform: translateY(4px);
+  }
 
 .points {
     background-image: url("/images/scoreTextbox.png");
@@ -59,7 +97,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 700px;
+    width: 650px;
     height: 400px;
     visibility: hidden;
 }

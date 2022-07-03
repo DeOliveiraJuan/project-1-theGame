@@ -60,6 +60,13 @@ clear() {
     )
 }
 
+stop() {
+    clearInterval(this.intervalId);
+    this.intervalId = null;
+    this.bgAudio.pause()
+    this.bgAudioMoto.pause()
+}
+
 countPoints() {
     this.points++
     const score = document.getElementById("score")
@@ -85,6 +92,7 @@ checkCollisions() {
     if(obs.collide(this.player)) {
         this.explotionAudio.play()
         this.gameOver();
+        this.explotion();
      }
   })
 }
@@ -101,6 +109,5 @@ gameOver() {
 
     this.bgAudio.pause()
     this.bgAudioMoto.pause()
-    
   }
 }
