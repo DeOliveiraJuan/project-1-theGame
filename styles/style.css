@@ -23,6 +23,26 @@ body {
     padding: 50px;
 }
 
+#intro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    background-image: url("/images/deadlySkull.gif");
+    width: 600px;
+    height: 400px;
+    padding: 40px;
+    color: rgb(18, 32, 87);
+    font-size: 500%;
+    font-weight: bold;
+    font-family: monospace;
+    font-stretch: expanded;
+    visibility: visible;
+}
+
 .menu-btns {
     display: flex;
     flex-direction: column;

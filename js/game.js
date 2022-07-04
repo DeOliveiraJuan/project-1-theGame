@@ -10,7 +10,7 @@ class Game {
         this.points = 0;
         this.bgAudio = new Audio()
         this.bgAudio.src = "/audio/tranceLoop.wav"
-        this.bgAudio.volume = 0.2;
+        this.bgAudio.volume = 0.3;
         this.bgAudio.loop = true;
         this.bgAudioMoto = new Audio()
         this.bgAudioMoto.src = "/audio/vespaSoundFinal.mp3"
@@ -19,6 +19,7 @@ class Game {
         this.gameOverAudio = new Audio()
         this.gameOverAudio.src = "/audio/coffinDance.mp3"
         this.gameOverAudio.volume = 0.5;
+        this.gameOverAudio.loop = true;
         this.explotionAudio = new Audio()
         this.explotionAudio.src = "/audio/explotion.wav"
         this.explotionAudio.volume = 0.5;

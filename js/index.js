@@ -20,7 +20,13 @@ const pauseBtn = document.getElementById('pause-btn')
 pauseBtn.addEventListener('click', () => {
     if (game.intervalId !== null) { 
         game.stop();  
-    }  
+        document.getElementById('pause-btn').style.visibility = 'hidden';
+        document.getElementById('play-btn').style.visibility = 'visible';
+    } else {
+        game.start()
+        document.getElementById('pause-btn').style.visibility = 'hidden';
+        document.getElementById('play-btn').style.visibility = 'visible';
+    }
 })
 
 const resetBtn = document.getElementById('reset-btn')
@@ -33,6 +39,8 @@ function changeBtns() {
     document.getElementById('play-btn').style.visibility = 'hidden';
     document.getElementById('pause-btn').style.visibility = 'visible';
     document.getElementById('reset-btn').style.visibility = 'visible';
+    document.getElementById('intro').style.visibility = 'hidden';
 }
+
 
 
