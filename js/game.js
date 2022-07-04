@@ -93,7 +93,6 @@ checkCollisions() {
     if(obs.collide(this.player)) {
         this.explotionAudio.play()
         this.gameOver();
-        this.explotion();
      }
   })
 }
