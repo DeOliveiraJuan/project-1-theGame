@@ -3,43 +3,53 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    text-align: center;
+    height: 100%;
 }
 
 .game-box {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-evenly;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .the-game {
-    position: relative;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    justify-content: space-around;
-    padding: 50px;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+    margin-top: 100px;
+}
+
+h1 {
+font-size: 80px;
+margin-left: 60px;
+}
+
+h4 {
+margin-left: 50px;
 }
 
 #intro {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
     background-image: url("/images/deadlySkull.gif");
-    width: 600px;
-    height: 400px;
-    padding: 40px;
+    background-position: -40px;
+    width: 700px;
+    height: 600px;
     color: rgb(18, 32, 87);
-    font-size: 500%;
+    font-size: 400%;
     font-weight: bold;
-    font-family: monospace;
-    font-stretch: expanded;
+    visibility: visible;
+}
+
+#creator {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    color: white;
     visibility: visible;
 }
 
@@ -49,6 +59,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    margin-top: 100px;
 }
 
 #play-btn{
@@ -106,12 +117,14 @@ body {
     line-height: 60px;
     font-family: 'SF Pixelate', sans-serif;
     font-size: larger;
+    margin-bottom: 80px;
+    margin-top: 100px;
 }
 
 .game-over {
     position: absolute;
-    top:45%;
-    left:50%;
+    top:55%;
+    left:49%;
     transform: translate(-50%, -50%);
     background-image: url("/images/coffindance-coffin.gif");
     background-repeat: no-repeat;

@@ -40,6 +40,7 @@ function changeBtns() {
     document.getElementById('pause-btn').style.visibility = 'visible';
     document.getElementById('reset-btn').style.visibility = 'visible';
     document.getElementById('intro').style.visibility = 'hidden';
+    document.getElementById('creator').style.visibility = 'hidden';
 }
 
 
