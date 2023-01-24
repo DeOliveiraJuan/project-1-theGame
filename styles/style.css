@@ -63,13 +63,13 @@ margin-left: 50px;
 }
 
 #play-btn{
-    position: relative;
     background: url("/images/startBtn.png"); 
     background-position: center;
     background-size: cover;
     width: 150px;
     height: 50px;
     border: none;
+    visibility: visible;
 }
 
 #play-btn:active {
