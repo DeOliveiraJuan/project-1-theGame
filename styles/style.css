@@ -112,14 +112,14 @@ margin-left: 50px;
     line-height: 60px;
     font-family: 'SF Pixelate', sans-serif;
     font-size: larger;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     margin-top: 100px;
 }
 
 .game-over {
     position: absolute;
     top:55%;
-    left:49%;
+    left:46%;
     transform: translate(-50%, -50%);
     background-image: url("/images/coffindance-coffin.gif");
     background-repeat: no-repeat;
@@ -129,5 +129,35 @@ margin-left: 50px;
     height: 400px;
     visibility: hidden;
 }
+
+.instructions {
+    color: white;
+    background-image: url("/images/wasd.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 150px;
+}
+
+.points-instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.instructions-text {
+    background-color: #040424;
+    color: white;
+    font-size: large;
+    font-family: 'SF Pixelate', sans-serif;
+    font-weight: 300;
+    width: 280px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+
 
 
