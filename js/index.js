@@ -36,7 +36,7 @@ resetBtn.addEventListener('click', () => {
 })
 
 function changeBtns() {
-    document.getElementById('play-btn').style.visibility = 'hidden';
+    document.getElementById('play-btn').style.visibility = 'visible';
     document.getElementById('pause-btn').style.visibility = 'visible';
     document.getElementById('reset-btn').style.visibility = 'visible';
     document.getElementById('intro').style.visibility = 'hidden';
